@@ -1,0 +1,43 @@
+@import './icons.css';
+
+.menu {
+  background-color: var(--main-background-color);
+}
+
+.menu .menu-list ul {
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.menu .menu-list li a {
+  text-decoration: none; 
+  color: white;
+}
+
+.menu .menu-list li a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.menu .menu-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.menu-list li {
+  margin-bottom: 1rem; /* Adicione o espaço vertical desejado */
+  
+}
+
+.icon-hamburger{
+  font-size: 2.5rem;
+}
+
+.menu-icon{
+  display: flex;
+  justify-content: start;
+  padding: 1rem;
+}
+

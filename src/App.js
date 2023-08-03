@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
-function App() {
+const Home = () => <h2>Página Inicial</h2>;
+const Sobre = () => <h2>Sobre mim</h2>;
+const Youtube = () => <h2>Canal Youtube</h2>;
+const ProjetosGratuitos = () => <h2>Projetos Gratuitos</h2>;
+const ProjetosPagos = () => <h2>Projetos Pagos</h2>;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/youtube" element={<Youtube />} />
+          <Route path="/projetos-gratuitos" element={<ProjetosGratuitos />} />
+          <Route path="/projetos-pagos" element={<ProjetosPagos />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
