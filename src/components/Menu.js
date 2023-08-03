@@ -16,7 +16,7 @@ const Menu = () => {
   };
 
   return (
-    <nav className='menu'>
+    <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
       <div
         className="menu-icon"
         onClick={handleMenuToggle}
@@ -26,7 +26,7 @@ const Menu = () => {
         {isMenuOpen ? <AiOutlineClose className="icon icon-hamburger" /> : <AiOutlineMenu className="icon icon-hamburger" />}
       </div>
       {isMenuOpen && (
-        <div className="menu-list"> 
+        <div className="menu-list">
           <ul className="nav-flex">
             <li>
               <Link to="/" onClick={handleMenuClose}>Página Inicial</Link>
