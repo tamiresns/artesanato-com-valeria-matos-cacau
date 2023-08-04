@@ -21,6 +21,7 @@ const Menu = () => {
         className="menu-icon"
         onClick={handleMenuToggle}
         role="button"
+        tabIndex="0" 
         aria-label={isMenuOpen ? 'Fechar Menu' : 'Abrir Menu'}
       >
         {isMenuOpen ? <AiOutlineClose className="icon icon-hamburger" /> : <AiOutlineMenu className="icon icon-hamburger" />}
