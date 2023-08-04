@@ -2,4 +2,41 @@
 
 .footer {
   background-color: var(--main-background-color);
+  color: var(--text-color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute; /* Posicionamento absoluto */
+  bottom: 0; /* Posicione o footer no final da tela */
+  width: 100%; /* Ocupa toda a largura */
 }
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0 auto;
+
+}
+
+.footer h1{
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.footer .author{
+  font-size: 0.8rem;
+}
+
+.author a{
+  color: white;
+}
+
+.social-icons li{
+  list-style-type: none;
+  margin: 0rem 1rem;
+}
+
+.social-icons li a{
+  font-size: 1.7rem;
+}
+  
